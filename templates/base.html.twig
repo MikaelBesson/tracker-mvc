@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/940412168c.js" crossorigin="anonymous"></script>
+
+    <title>{% block title %} {% endblock %}</title>
+
+</head>
+
+<body>
+{% block nav %}
+    <nav id="navbox">
+        <a href="/inscription">Inscription</a>
+        <a href="/">Connexion</a>
+        <a href="/deconnect">Exit</a>
+    </nav>
+{% endblock %}
+
+{% block error %} {% endblock %}
+
+{% block body %} {% endblock %}
+
+<script src="/build/js/main.js"></script>
+</body>
+</html>

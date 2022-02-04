@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+
+    <div class="projets-container">
+        <h1>Gestionnaire de projet</h1>
+        <div class="projet">
+            <h2>Menu projet</h2><br>
+            <form action="/project/add" method="post"><br>
+                <label for="name">Ajoutez un projet</label>
+                <input id="name" name="name" type="text">
+                <input type="submit">
+            </form><br>
+            <form action="/project/delete" method="post">
+                <select name="id">
+                    {% for projet in projets %}
+                        <option value="{{ projet.getId() }}">{{ projet.getTitle() }}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" value="Supprimer">
+            </form>
+        </div>
+        {% for projet in projets %}
+            {% include "projets/single.html.twig" with {projet: projet} %}
+        {% endfor %}
+    </div>
+
+
+
+{% endblock %}

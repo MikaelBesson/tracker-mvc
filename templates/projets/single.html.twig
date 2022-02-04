@@ -1,0 +1,19 @@
+
+
+<div class="projet">
+    <h2>{{ projet.getTitle() }}</h2>
+    <div class="item-container">
+        {% if projet.getItems() is not empty %}
+            {% for item in projet.getItems() %}
+                {% include "projets/_partials/item.html.twig" with {item: item} %}
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div class="add-item">
+        <form action="/item/add" method="post">
+            <input name="projet_fk" type="hidden" value="{{ projet.getId() }}">
+            <input name="name" type="text">
+            <input type="submit">
+        </form>
+    </div>
+</div>

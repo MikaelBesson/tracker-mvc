@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+}
+
+#navbox {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 19px 8px rgba(0,0,0,0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: white;
+}
+
+#navbox a {
+    color: black;
+    text-decoration: none;
+}
+
+#navbox a:hover {
+    cursor: pointer;
+}
+
+.form-container {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container form {
+    padding: 2%;
+    width: 30%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 0 19px 8px rgba(0,0,0,0.2);
+}
+
+.form-container form div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    padding: 5px;
+    font-size: 16px;
+    border-width: 1px;
+    box-shadow: 0 0 5px rgba(66, 66, 66, .75);
+}
+
+input:focus {
+    outline:none;
+}
+
+#error {
+    width: 100%;
+    height: 5vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: error;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes error {
+    from {
+        height: 5vh;
+        color: black;
+    }
+    to {
+        height: 0;
+        color: transparent;
+    }
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 3vh;
+}
+
+.projets-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 2%;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 7vh;
+    left: 0;
+}
+
+.projet {
+    width: 40%;
+    height: 40vh;
+    margin-bottom: 3vh;
+    box-shadow: 0 0 5px rgba(66, 66, 66, .75);
+}
+
+.projet h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.item-container {
+    overflow-y: scroll;
+    width: 100%;
+    height: 83%;
+    padding: 1%;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid black;
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+.add-item {
+    width: 100%;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+.add-item form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 30%;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+

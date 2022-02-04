@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Inscription {% endblock %}
+
+{% block error %}
+    {% if error is not null %}
+    <div id="error">
+        {{error}}
+    </div>
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+
+    <div class="form-container">
+        <form action="/handleInscription" method="post">
+            <div>
+                <label for="name">Votre nom :</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div>
+                <label for="password">Votre password :</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div>
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

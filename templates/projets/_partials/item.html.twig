@@ -1,0 +1,15 @@
+
+<div class="item" id="{{ item.getId() }}" data-time="{{ item.getTimestamp() }}">
+    <h3>{{ item.getTitle() }}</h3>
+    <div name="chronoForm" id="chronoForm">
+        <a href="/item/delete/{{ item.getId() }}"><i class="fas fa-trash-alt"></i></a>
+        <span type="text" name="chronotime" class="chronotime">0d:00h:00m:00s</span>
+        <input type="button" name="startstop" class="btn startstop" id="startstop" value="start"/>
+        <input type="button" name="reset" class="btn reset" id="reset" value="reset!"/>
+    </div>
+</div>
+
+
+
+
+
